@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'navigation content content content' 
+                         'navigation content content content'
+                         'navigation content content content'
+                         'footer footer footer footer';
+    color: white;
+}
+
+#header h1{
+    color : white;
+    font-size: 80px;
+    font-family: Arial, sans-serif;
+    padding: 15px 30px;
+}
+
+#header{
+    grid-area: header;
+    text-align: center;
+    background-color: #2a2e30;
+    border: 3px solid #3393b6;
+}
+#navigation{
+    grid-area: navigation;
+    background-color: #2a2e30;
+    border: 3px solid #3393b6;
+    text-align: center;
+    padding: 200px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px; /* spacing between menu items */
+}
+
+
+#navigation a{
+    display: block;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 12px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#content{
+    grid-area: content;
+    text-align: center;
+    background-image: url("images/wew.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 3px solid #3393b6;
+}
+
+/* HOME BOX */
+#content-1{
+    border: 3px solid #3393b6;
+    padding: 30px 40px;
+    background-color: white;
+    width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* Home title */
+#content-1 h1{
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+/* Home paragraph */
+#content-1 p{
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.home-img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+
+#footer{
+    display: flex;
+    padding-bottom: 30px;
+    grid-area: footer;
+    background-color: #2a2e30;
+    padding-top: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: space-between ;
+    border: 3px solid #3393b6;
+}
+
+
+
+#header img{
+    float: left;
+    border-radius: 100px;
+    height: 93px;
+    margin-left: 10px;
+    border: 4px solid #b65833;
+}
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#navigation a:hover{
+    background-color: black;
+    color: white;
+    transform: translateX(5px); /* small slide effect */
+}
+
+/* LOGIN BOX */
+#login{
+    width: 380px;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+#login h2{
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Inputs */
+#login input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+
+    background: rgba(255,255,255,0.8);
+    transition: 0.3s ease;
+}
+
+/* Focus effect */
+#login input:focus{
+    outline: none;
+    transform: scale(1.03);
+    box-shadow: 0 0 8px #2b7cff;
+}
+
+/* Button */
+#login button{
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #3393b6, #2b7cff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover button */
+#login button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Sign Up link */
+#login a{
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+#login a:hover{
+    color: #2b7cff;
+}
